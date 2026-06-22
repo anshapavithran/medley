@@ -13,11 +13,6 @@ import {
   FaUsers,
   FaAward,
 } from "react-icons/fa";
-
-const Home = () => {
-  const navigate = useNavigate();
-  const [currentSlide, setCurrentSlide] = useState(0);
-
   const heroSlides = [
     {
       title: "Industrial Lubrication Systems",
@@ -44,6 +39,11 @@ const Home = () => {
       image: "/images/lub3.jpg",
     },
   ];
+const Home = () => {
+  const navigate = useNavigate();
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+
 
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
@@ -55,10 +55,6 @@ const Home = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const fadeUp = {
-    hidden: { opacity: 0, y: 50 },
-    show: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-  };
 
   return (
     <div className="bg-black text-white overflow-hidden">
@@ -76,6 +72,7 @@ const Home = () => {
           >
             <img
               src={slide.image}
+               alt={slide.title}
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-black/40"></div>

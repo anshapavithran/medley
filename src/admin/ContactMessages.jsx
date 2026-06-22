@@ -13,8 +13,8 @@ const ContactMessages = () => {
       .then((data) => setMessages(data))
       .catch((err) => console.log(err));
   }, []);
-const [fromDate, setFromDate] = useState("");
-const [toDate, setToDate] = useState("");
+// const [fromDate, setFromDate] = useState("");
+// const [toDate, setToDate] = useState("");
   const filtered = messages.filter((item) => {
     const value = search.toLowerCase();
  const formattedDate = item.created_at

@@ -10,7 +10,7 @@ import {
   FaBoxes,
   FaWrench,
   FaClock,
-  FaHeadset,
+
 } from "react-icons/fa";
 
 export default function Services() {

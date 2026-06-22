@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-import Navbar from "../Components/Navbar";
+
 import config from "../utils/config";
 
 export default function Careers() {
@@ -66,10 +66,11 @@ const submitApplication = async (e) => {
 
   try {
     const res = await axios.post(
-      `${config.baseurl}/career-apply/`,
-      data
-    );
+  `${config.baseurl}/career-apply/`,
+  data
+);
 
+console.log(res.data); // use it
     alert("Application Submitted Successfully");
 
     setShowModal(false);

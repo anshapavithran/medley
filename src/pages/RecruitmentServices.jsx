@@ -1,12 +1,6 @@
-import Navbar from "../Components/Navbar";
+
 import React, { useState, useRef,useEffect } from "react";
-import {
-  FaBriefcase,
-  FaUserPlus,
-  FaFileAlt,
-  FaBell,
-  FaHandHoldingUsd,FaGraduationCap
-} from "react-icons/fa";
+
 import {
   FaCouch,
   FaBorderAll,
@@ -16,9 +10,9 @@ import {
   FaTools
 } from "react-icons/fa";
 
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 export default function RecruitmentServices() {
-    const [selectedType, setSelectedType] = useState("");
+    // const [selectedType, setSelectedType] = useState("");
    const [formData, setFormData] = useState({
   first_name: "",
   last_name: "",
