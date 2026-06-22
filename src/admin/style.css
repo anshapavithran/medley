@@ -1,0 +1,24 @@
+/* Prevent the entire page from horizontal scrolling */
+body, html {
+  overflow-x: hidden;
+}
+
+/* only table scrolls */
+.table-scroll {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid #ddd;
+}
+
+/* table min-width forces scroll only inside this container */
+.table-scroll table {
+  border-collapse: collapse;
+  min-width: 900px;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 12px;
+  text-align: left;
+  background: white;
+}
