@@ -18,25 +18,25 @@ import {
       title: "Industrial Lubrication Systems",
       description:
         "Advanced automatic lubrication solutions for machine efficiency and reliability.",
-      image: "/images/lub.jpg",
+      image: "/images/g2.png",
     },
     {
       title: "Sales & Service Support",
       description:
         "Installation, maintenance & complete lubrication system solutions.",
-      image: "/images/lub1.webp",
+      image: "/images/lub.jpg",
     },
     {
       title: "Spare Parts Supply",
       description:
         "Genuine industrial lubrication components & Memolub systems.",
-      image: "/images/lub2.jpg",
+      image: "/images/sp.png",
     },
     {
       title: "Smart Maintenance Solutions",
       description:
         "Reduce downtime with advanced automated lubrication systems.",
-      image: "/images/lub3.jpg",
+      image: "/images/g1.jpg",
     },
   ];
 const Home = () => {

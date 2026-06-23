@@ -97,7 +97,7 @@ export default function About() {
         <section className="max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-12 items-center">
 
           <motion.img
-            src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d"
+            src="/images/s1.png"
             className="rounded-2xl shadow-2xl"
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}

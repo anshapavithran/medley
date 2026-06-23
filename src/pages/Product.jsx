@@ -88,7 +88,148 @@ const pdfDocuments = [
   },
 ];
 
+const [showSKFModal, setShowSKFModal] = useState(false);
 
+const skfDocuments = [
+  {
+    name: " Deep Groove Ball Bearings",
+    description:
+      "High-performance bearings designed for reliability, low friction and long service life.",
+
+    file: "/pdfs/SKF_Deep_Groove_Detailed_new.pdf",
+  },
+
+  {
+    name: " Plummer Block Housings",
+    description:
+      "Robust bearing housing solutions suitable for heavy industrial applications.",
+
+    file: "/pdfs/SKF_Plummer_Block_Detailed.pdf",
+  },
+
+  {
+    name: " Mounted Bearing Units",
+    description:
+      "Pre-assembled bearing units providing easy installation and reduced maintenance.",
+
+    file: "/pdfs/Mounted_Bearing_Units.pdf",
+  },
+   
+  {
+    name: "Angular Contact Ball Bearings",
+    description:
+      "Designed for combined radial and axial loads in high-speed applications.",
+      file: "/pdfs/Angular_Contact_Ball_Bearings.pdf",
+  },
+  {
+    name: "Self-Aligning Ball Bearings",
+    description:
+      "Automatically compensate for shaft misalignment and shaft deflection.",
+      file: "/pdfs/Self_Aligning_Ball_Bearings.pdf",
+  },
+  {
+    name: "Four-Point Contact Ball Bearings",
+    description:
+      "Support axial loads in both directions with a compact design.",
+      file: "/pdfs/Four_Point_Contact_Ball_Bearings.pdf",
+  },
+  {
+    name: "Cylindrical Roller Bearings",
+    description:
+      "High radial load capacity and excellent performance at high speeds.",
+      file: "/pdfs/Cylindrical_Roller_Bearings.pdf",
+  },
+  {
+    name: "Needle Roller Bearings",
+    description:
+      "Compact bearings with high load carrying capacity in limited space.",
+      file: "/pdfs/Needle_Roller_Bearings.pdf",
+  },
+  {
+    name: "Tapered Roller Bearings",
+    description:
+      "Ideal for combined radial and axial loads in heavy-duty applications.",
+      file: "/pdfs/Tapered_Roller_Bearings.pdf",
+  },
+  {
+    name: "Spherical Roller Bearings",
+    description:
+      "Self-aligning bearings designed for heavy loads and harsh environments.",
+      file: "/pdfs/Spherical_Roller_Bearings.pdf",
+  },
+  {
+    name: "CARB Toroidal Roller Bearings",
+    description:
+      "Accommodate shaft displacement while carrying heavy radial loads.",
+      file: "/pdfs/CARB_Toroidal_Roller_Bearings.pdf",
+  },
+  {
+    name: "Thrust Ball Bearings",
+    description:
+      "Designed primarily for axial load applications at moderate speeds.",
+      file: "/pdfs/Thrust_Ball_Bearings.pdf",
+  },
+  {
+    name: "Cylindrical Roller Thrust Bearings",
+    description:
+      "Handle heavy axial loads in demanding industrial equipment.",
+      file: "/pdfs/Cylindrical_Roller_Thrust_Bearings.pdf",
+  },
+  {
+    name: "Spherical Roller Thrust Bearings",
+    description:
+      "Support extremely heavy axial loads and some radial loads.",
+      file: "/pdfs/Spherical_Roller_Thrust_Bearings.pdf",
+  },
+  {
+    name: "Hybrid Bearings",
+    description:
+      "Ceramic rolling elements provide high speed and electrical insulation.",
+      file: "/pdfs/Hybrid_Bearings.pdf",
+  },
+  {
+    name: "INSOCOAT Bearings",
+    description:
+      "Electrically insulated bearings for motors and generators.",
+      file: "/pdfs/INSOCOAT_Bearings.pdf",
+  },
+  {
+    name: "NoWear Bearings",
+    description:
+      "Special coated bearings offering reduced wear and longer service life.",
+      file: "/pdfs/NoWear_Bearings.pdf",
+  },
+  {
+    name: "High Temperature Bearings",
+    description:
+      "Designed for continuous operation in elevated temperature environments.",
+      file: "/pdfs/High_Temperature_Bearings.pdf",
+  },
+  {
+    name: "Mounted Bearing Units",
+    description:
+      "Pre-assembled bearing and housing units for easy installation.",
+      file: "/pdfs/SKF_Mounted_Bearing_Units_Detailed.pdf",
+  },
+  {
+    name: "Bearing Housings",
+    description:
+      "Support structures that securely mount and protect bearings.",
+      file: "/pdfs/SKF_Mounted_Bearing_Units_Detailed.pdf",
+  },
+  {
+    name: "Split Roller Bearings",
+    description:
+      "Quick installation and replacement without removing surrounding equipment.",
+      file: "/pdfs/Split_Roller_Bearings.pdf",
+  },
+  {
+    name: "Slewing Bearings",
+    description:
+      "Large diameter bearings used in cranes, excavators and rotating platforms.",
+      file: "/pdfs/Slewing_Bearings.pdf",
+  },
+];
   return (
     <>
     <section className="relative py-14 overflow-hidden min-h-[calc(100vh-370px)]">
@@ -170,7 +311,59 @@ const pdfDocuments = [
 
   </div>
 </div>
+{/* SKF Bearing & Housing */}
+<div className="max-w-7xl mx-auto px-5 mb-16">
+  <div className="grid lg:grid-cols-2 gap-10 items-center bg-black/60 backdrop-blur-md rounded-3xl p-8 border border-yellow-500/20">
 
+    <div>
+      <h2 className="text-5xl font-bold text-yellow-400 mb-5">
+        SKF Bearings & Housing Solutions
+      </h2>
+
+      <p className="text-gray-300 leading-8 mb-6">
+        Complete sales, technical support, installation assistance and spare
+        supply for SKF bearings, bearing housings, mounted units and industrial
+        rotating equipment solutions.
+      </p>
+
+      <div className="flex flex-wrap gap-4">
+        <button
+          onClick={() => setShowSKFModal(true)}
+          className="bg-white text-black px-8 py-4 rounded-xl font-bold hover:bg-gray-200"
+        >
+          Know More
+        </button>
+
+        <button
+          onClick={() => navigate("/contact")}
+          className="bg-yellow-500 hover:bg-yellow-600 text-black px-8 py-4 rounded-xl font-bold"
+        >
+          Contact Our Experts
+        </button>
+      </div>
+    </div>
+
+   <div className="relative w-full h-[350px]">
+
+  <video
+    autoPlay
+    muted
+    loop
+    playsInline
+    className="rounded-2xl shadow-2xl w-full h-full object-cover"
+  >
+    <source src="/videos/bearing.mp4" type="video/mp4" />
+  </video>
+
+  {/* Golden Overlay */}
+  <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-black/80 via-black/40 to-yellow-700/50" />
+
+  {/* Text Overlay */}
+ 
+
+</div>
+  </div>
+</div>
       </div>
 {showModal && (
   <div className="fixed inset-0 z-[9999]">
@@ -317,7 +510,119 @@ const pdfDocuments = [
   </div>
 )}
       {/* Footer */}
-   
+   {showSKFModal && (
+  <div className="fixed inset-0 z-[9999]">
+
+    <div
+      className="absolute inset-0 bg-black/80 backdrop-blur-sm"
+      onClick={() => setShowSKFModal(false)}
+    />
+
+    <div className="relative h-full py-6 px-4 flex justify-center items-start">
+      <div className="w-full max-w-5xl bg-[#111] border border-yellow-500/30 rounded-2xl shadow-2xl">
+
+        <div className="sticky top-0 z-20 bg-[#111] border-b border-yellow-500/20 px-6 py-4 flex items-center justify-between rounded-t-2xl">
+          <h2 className="text-xl md:text-2xl font-bold text-yellow-400">
+            SKF Bearing & Housing Documents
+          </h2>
+
+          <button
+            onClick={() => setShowSKFModal(false)}
+            className="w-10 h-10 rounded-full hover:bg-white/10 text-white text-2xl"
+          >
+            ×
+          </button>
+        </div>
+
+        <div className="p-6 overflow-y-auto max-h-[75vh]">
+
+          <div className="mb-6 p-5 rounded-xl bg-yellow-500/10 border border-yellow-500/20">
+            <h3 className="text-lg font-semibold text-yellow-400 mb-2">
+              SKF Product Information Center
+            </h3>
+
+            <p className="text-gray-300 leading-7">
+              Explore SKF bearing solutions, mounted units, housing systems,
+              industrial reliability products and technical documentation.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-5">
+            {skfDocuments.map((pdf, index) => (
+              <div
+                key={index}
+                className="rounded-2xl border border-yellow-500/20 bg-black/40 p-5"
+              >
+                <h3 className="text-lg font-bold text-yellow-400 mb-2">
+                  {pdf.name}
+                </h3>
+
+                <p className="text-gray-300 text-sm mb-4 leading-6">
+                  {pdf.description}
+                </p>
+
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <a
+                    href={pdf.file}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="flex-1 text-center bg-white text-black py-2 rounded-lg font-semibold"
+                  >
+                    Preview
+                  </a>
+
+                  <a
+                    href={pdf.file}
+                    download
+                    className="flex-1 text-center bg-yellow-500 hover:bg-yellow-600 text-black py-2 rounded-lg font-semibold"
+                  >
+                    Download
+                  </a>
+                </div>
+              </div>
+            ))}
+            
+          </div>
+
+          <div className="mt-10 rounded-3xl border border-yellow-500/20 bg-gradient-to-br from-[#1b1b1b] to-[#0d0d0d] overflow-hidden">
+            <div className="bg-gradient-to-r from-yellow-500/20 to-transparent px-6 py-5 border-b border-yellow-500/20">
+              <h3 className="text-2xl md:text-3xl font-bold text-yellow-400">
+                Learn More From SKF
+              </h3>
+
+              <p className="text-gray-300 mt-2">
+                Discover bearings, housings, mounted units, maintenance tools
+                and industrial reliability solutions.
+              </p>
+            </div>
+
+            <div className="p-6">
+              <div className="flex flex-wrap gap-4">
+                <a
+                  href="https://www.skf.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-yellow-500 hover:bg-yellow-600 text-black px-6 py-3 rounded-xl font-bold"
+                >
+                  Visit Official Website →
+                </a>
+
+                <button
+                  onClick={() => navigate("/contact")}
+                  className="bg-white hover:bg-gray-200 text-black px-6 py-3 rounded-xl font-bold"
+                >
+                  Contact Our Experts
+                </button>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+)}
 </section>
   <footer className="bg-black/80 backdrop-blur-md text-white pt-16 pb-8">
 
