@@ -124,6 +124,76 @@ const lincolnProducts = [
     file: "/pdfs/single line lubrication system.pdf",
     image: "/images/cu.png",
   },
+  {
+  name: "Dual Line Lubrication Systems",
+  description:
+    "Automatic dual line lubrication systems designed for large industrial machines with numerous lubrication points over long distances. Ideal for steel plants, cement factories, mining equipment, power plants, and heavy industrial applications where reliable grease distribution is essential.",
+  file: "/pdfs/dual line lubrication system.pdf",
+  image: "/images/dual.webp",
+},
+
+{
+  name: "Spray Lubrication Systems",
+  description:
+    "Lincoln spray lubrication systems provide controlled lubricant application through precision spray nozzles. Suitable for open gears, chains, rollers, kilns, and conveyor systems, ensuring uniform lubricant coverage while reducing lubricant consumption and wear.",
+  file: "/pdfs/spray lubrication system.pdf",
+  image: "/images/spry.jpg",
+},
+{
+  name: "Oil Circulation Systems",
+  description:
+    "Lincoln oil circulation lubrication systems continuously circulate filtered and temperature-controlled oil to bearings, gears, and other critical machine components. Ideal for steel mills, paper machines, turbines, compressors, gearboxes, and other heavy industrial equipment requiring continuous lubrication and cooling.",
+  file: "/pdfs/oil circulation system.pdf",
+  image: "/images/oil.jpg",
+},
+
+{
+  name: "Lubrigun Pump Unit",
+  description:
+    "Air-operated high-pressure barrel pump designed for dual line lubrication systems. Features a double-acting piston, corrosion-resistant construction, low noise operation and reliable grease delivery for heavy industrial applications.",
+  file: "/pdfs/dual line lubrication system.pdf",
+  image: "/images/air.png",
+},
+
+{
+  name: "PowerMaster III Pump Unit",
+  description:
+    "Heavy-duty modular air-operated pump designed for large grease drums and centralized dual line lubrication systems. Suitable for steel plants, mining, hydraulic excavators and other high-volume lubrication applications.",
+  file: "/pdfs/dual line lubrication system.pdf",
+  image: "/images/pum.png",
+},
+
+{
+  name: "BPH Hydraulic Barrel Pump",
+  description:
+    "Hydraulically operated barrel pump for demanding construction and mining machinery. Features optional pressure, temperature and piston monitoring sensors for reliable lubrication performance.",
+  file: "/pdfs/dual line lubrication system.pdf",
+  image: "/images/pum1.png",
+},
+
+{
+  name: "SMG Dual Line Metering Device",
+  description:
+    "Compact dual line grease metering device with adjustable lubricant output, built-in check valves and solid steel construction. Designed for heavy construction equipment, forestry machines and mining vehicles.",
+  file: "/pdfs/dual line lubrication system.pdf",
+  image: "/images/smg.png",
+},
+
+{
+  name: "VSKH / VSKV Metering Devices",
+  description:
+    "High-pressure dual line metering devices with up to eight outlets, adjustable output and optional proximity switches or piston detectors. Suitable for cement plants, mining equipment and steel industries.",
+  file: "/pdfs/dual line lubrication system.pdf",
+  image: "/images/vm.png",
+},
+
+{
+  name: "VSG Metering Device",
+  description:
+    "Heavy-duty galvanized steel metering device for dual line lubrication systems with adjustable lubricant output and visual or electronic monitoring options. Ideal for steel plants, cement plants and mining machinery.",
+  file: "/pdfs/dual line lubrication system.pdf",
+  image: "/images/vsg.webp",
+},
 ];
 const pdfDocuments = [
   {
