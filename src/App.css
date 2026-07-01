@@ -79,3 +79,17 @@
 body{
   background-color: #36292b;
 }
+@keyframes floatButton {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.float-button {
+  animation: floatButton 2s ease-in-out infinite;
+}

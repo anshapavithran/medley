@@ -6,6 +6,7 @@ import React, { useEffect, useState,useRef } from "react";
 export default function Product() {
   const navigate = useNavigate();
   const modalRef = useRef(null);
+  const [showLincolnModal, setShowLincolnModal] = useState(false);
 const openModal = () => {
   setShowModal(true);
 
@@ -27,6 +28,103 @@ const openModal = () => {
     });
   }, []);
 const [showModal, setShowModal] = useState(false);
+const lincolnProducts = [
+  {
+    name: "Single Line Lubrication Systems",
+    description:
+      "Automatic lubrication systems designed to deliver precise amounts of lubricant to multiple lubrication points from a single pump. Ideal for machine tools, steel plants, paper mills, mining equipment, and industrial machinery.",
+    file: "/pdfs/single line lubrication system.pdf",
+    image: "/images/single.png",
+  },
+
+  {
+    name: "Progressive Lubrication Systems",
+    description:
+      "Lincoln Quicklub and SKF ProFlex progressive lubrication systems provide accurate lubricant distribution for medium-sized machines with multiple lubrication points. Suitable for construction, agriculture, mining, and transportation industries.",
+    file: "/pdfs/progressive Lubrication system.pdf",
+    image: "/images/pro.jpg",
+  },
+
+  {
+    name: "P 205 Pump Unit",
+    description:
+      "High-pressure electrically operated piston pump capable of supplying grease or oil directly to lubrication points or centralized lubrication systems. Modular design with up to five pump elements.",
+    file: "/pdfs/progressive Lubrication system.pdf",
+    image: "/images/p20.png",
+  },
+
+  {
+    name: "P 203 Pump Unit",
+    description:
+      "Compact piston pump designed for centralized lubrication applications requiring high reliability, low maintenance, and continuous operation.",
+    file: "/pdfs/progressive Lubrication system.pdf",
+    image: "/images/p203.png",
+  },
+
+  {
+    name: "P 253 Smart Pump",
+    description:
+      "Smart lubrication pump with programmable control functions, ideal for industrial automation and centralized lubrication systems.",
+    file: "/pdfs/progressive Lubrication system.pdf",
+    image: "/images/p25.jpg",
+  },
+
+  {
+    name: "KFG Pump Unit",
+    description:
+      "Electrically operated piston pump suitable for progressive lubrication systems using grease up to NLGI Grade 2 with excellent pressure performance.",
+    file: "/pdfs/progressive Lubrication system.pdf",
+    image: "/images/kfg.avif",
+  },
+
+  {
+    name: "SSV Metering Devices",
+    description:
+      "Progressive metering devices that accurately distribute lubricant to multiple lubrication points while allowing system monitoring and reliable operation.",
+    file: "/pdfs/progressive Lubrication system.pdf",
+    image: "/images/ssv.webp",
+  },
+
+  {
+    name: "CLP Smart Controller",
+    description:
+      "Electronic lubrication controller for monitoring pump cycles, lubrication intervals, alarms, and maintenance schedules.",
+    file: "/pdfs/progressive Lubrication system.pdf",
+    image: "/images/smart.png",
+  },
+
+  {
+    name: "Pressure Sensors",
+    description:
+      "Pressure monitoring devices including DSA, DSB, DSD and DSC series for automatic lubrication systems, ensuring proper lubricant delivery and system safety.",
+    file: "/pdfs/single line lubrication system.pdf",
+    image: "/images/pre.png",
+  },
+
+  {
+    name: "Flow Monitoring Devices",
+    description:
+      "Flow sensors and monitoring devices used to verify lubricant flow and detect blockages in centralized lubrication systems.",
+    file: "/pdfs/single line lubrication system.pdf",
+    image: "/images/flow.png",
+  },
+
+  {
+    name: "Solenoid Valves",
+    description:
+      "High-performance lubrication solenoid valves designed to control lubricant flow in automatic lubrication systems with excellent reliability.",
+    file: "/pdfs/single line lubrication system.pdf",
+    image: "/images/val.png",
+  },
+
+  {
+    name: "Control Units",
+    description:
+      "Advanced lubrication controllers including LMC 101, LMC 2, LMC 301, EXZT, ST-102 and ST-2240 for complete lubrication system automation.",
+    file: "/pdfs/single line lubrication system.pdf",
+    image: "/images/cu.png",
+  },
+];
 const pdfDocuments = [
   {
     name: "Memolub EPS",
@@ -281,16 +379,46 @@ const skfDocuments = [
       </p>
 
     <div className="flex flex-wrap gap-4">
-  <button
+  {/* <button
     onClick={openModal}
     className="bg-white text-black px-8 py-4 rounded-xl font-bold hover:bg-gray-200"
   >
     Know More
-  </button>
+  </button> */}
+
+      <button
+        onClick={openModal}
+        className="
+          group
+          relative
+          overflow-hidden
+          px-8 py-4
+          rounded-xl
+          font-bold
+          text-black
+          bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-500
+          shadow-lg shadow-yellow-500/40
+          hover:shadow-yellow-400/90
+          hover:scale-105
+          active:scale-95
+          transition-all
+          duration-300
+          animate-pulse
+        "
+      >
+        <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/50 to-transparent group-hover:translate-x-full transition-transform duration-1000"></span>
+
+        <span className="relative flex items-center gap-2">
+          Know More
+          <span className="text-lg group-hover:translate-x-2 transition-transform duration-300">
+            →
+          </span>
+        </span>
+      </button>
 
   <button
     onClick={() => navigate("/contact")}
-    className="bg-yellow-500 hover:bg-yellow-600 text-black px-8 py-4 rounded-xl font-bold"
+    className="bg-white hover:bg-yellow-600 text-black px-8 py-4 rounded-xl font-bold"
   >
     Contact Our Experts
   </button>
@@ -312,6 +440,119 @@ const skfDocuments = [
   </div>
 </div>
 {/* SKF Bearing & Housing */}
+
+<div className="max-w-7xl mx-auto px-5 mb-16">
+<div className="grid lg:grid-cols-2 gap-10 items-center bg-black/60 backdrop-blur-md rounded-3xl p-8 border border-yellow-500/20">
+
+  {/* Left Content */}
+  <div>
+    <h2 className="text-5xl font-bold text-yellow-400 mb-5">
+      Lincoln Automatic Lubrication Systems
+    </h2>
+
+    <p className="text-gray-300 leading-8 mb-6">
+      Complete supply, installation, commissioning and technical support for
+      Lincoln centralized lubrication systems. We provide progressive,
+      single-line, multi-line lubrication systems, pumps, metering devices,
+      controllers and accessories for industrial and mobile equipment.
+    </p>
+
+    <div className="grid grid-cols-2 gap-3 mb-6 text-sm">
+      <div className="bg-yellow-500/10 border border-yellow-500/20 rounded-lg p-3 text-yellow-300">
+        ✓ Progressive Systems
+      </div>
+
+      <div className="bg-yellow-500/10 border border-yellow-500/20 rounded-lg p-3 text-yellow-300">
+        ✓ Single Line Systems
+      </div>
+
+      <div className="bg-yellow-500/10 border border-yellow-500/20 rounded-lg p-3 text-yellow-300">
+        ✓ Lincoln Pumps
+      </div>
+
+      <div className="bg-yellow-500/10 border border-yellow-500/20 rounded-lg p-3 text-yellow-300">
+        ✓ Smart Controllers
+      </div>
+    </div>
+
+    <div className="flex flex-wrap gap-4">
+
+      <button
+         onClick={() => setShowLincolnModal(true)}
+        className="
+          group
+          relative
+          overflow-hidden
+          px-8 py-4
+          rounded-xl
+          font-bold
+          text-black
+          bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-500
+          shadow-lg shadow-yellow-500/40
+          hover:shadow-yellow-400/90
+          hover:scale-105
+          active:scale-95
+          transition-all
+          duration-300
+          animate-pulse
+        "
+      >
+        <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/50 to-transparent group-hover:translate-x-full transition-transform duration-1000"></span>
+
+        <span className="relative flex items-center gap-2">
+          Know More
+          <span className="text-lg group-hover:translate-x-2 transition-transform duration-300">
+            →
+          </span>
+        </span>
+      </button>
+
+      <button
+        onClick={() => navigate("/contact")}
+        className="bg-white hover:bg-yellow-600 text-black px-8 py-4 rounded-xl font-bold transition-all duration-300"
+      >
+        Contact Our Experts
+      </button>
+
+    </div>
+  </div>
+
+  {/* Right Side Video/Image */}
+  <div className="relative w-full h-[350px]">
+
+  {/* Image */}
+  <img
+    src="/images/lincon.png"
+    alt="Lincoln Automatic Lubrication System"
+    className="rounded-2xl shadow-2xl w-full h-full object-cover"
+  />
+
+  {/* Golden Overlay */}
+  <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-black/80 via-black/40 to-yellow-700/50" />
+
+  {/* Floating Badge */}
+  {/* <div className="absolute top-5 left-5 bg-yellow-500 text-black font-bold px-4 py-2 rounded-full shadow-lg animate-bounce">
+    Lincoln Solutions
+  </div> */}
+
+  {/* Bottom Info */}
+  <div className="absolute bottom-5 left-5 right-5">
+    <div className="bg-black/60 backdrop-blur-md rounded-xl p-4 border border-yellow-500/20">
+      <h3 className="text-yellow-400 font-bold text-lg mb-2">
+        Automatic Lubrication Experts
+      </h3>
+
+      <p className="text-gray-300 text-sm">
+        Improve machine reliability, reduce maintenance costs and extend
+        equipment life with Lincoln lubrication solutions.
+      </p>
+    </div>
+  </div>
+
+</div>
+
+</div>
+</div>
 <div className="max-w-7xl mx-auto px-5 mb-16">
   <div className="grid lg:grid-cols-2 gap-10 items-center bg-black/60 backdrop-blur-md rounded-3xl p-8 border border-yellow-500/20">
 
@@ -327,16 +568,45 @@ const skfDocuments = [
       </p>
 
       <div className="flex flex-wrap gap-4">
-        <button
+        {/* <button
           onClick={() => setShowSKFModal(true)}
           className="bg-white text-black px-8 py-4 rounded-xl font-bold hover:bg-gray-200"
         >
           Know More
-        </button>
+        </button> */}
+<button
+  onClick={() => setShowSKFModal(true)}
+  className="
+    group
+    relative
+    overflow-hidden
+    px-8 py-4
+    rounded-xl
+    font-bold
+    text-black
+    bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-500
+    shadow-lg shadow-yellow-500/40
+    hover:shadow-yellow-400/90
+    hover:scale-105
+    active:scale-95
+    transition-all
+    duration-300
+    animate-pulse
+  "
+>
+  {/* Shine Effect */}
+  <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/50 to-transparent group-hover:translate-x-full transition-transform duration-1000"></span>
 
+  <span className="relative flex items-center gap-2">
+    Know More
+    <span className="text-lg group-hover:translate-x-2 transition-transform duration-300">
+      →
+    </span>
+  </span>
+</button>
         <button
           onClick={() => navigate("/contact")}
-          className="bg-yellow-500 hover:bg-yellow-600 text-black px-8 py-4 rounded-xl font-bold"
+          className="bg-white hover:bg-yellow-600 text-black px-8 py-4 rounded-xl font-bold"
         >
           Contact Our Experts
         </button>
@@ -621,6 +891,155 @@ const skfDocuments = [
         </div>
       </div>
     </div>
+  </div>
+)}
+{showLincolnModal && (
+  <div className="fixed inset-0 z-[9999]">
+
+    {/* Backdrop */}
+    <div
+      className="absolute inset-0 bg-black/80 backdrop-blur-sm"
+      onClick={() => setShowLincolnModal(false)}
+    />
+
+    <div className="relative h-full py-6 px-4 flex justify-center items-start">
+
+      <div className="w-full max-w-6xl bg-[#111] border border-yellow-500/30 rounded-2xl shadow-2xl">
+
+        {/* Header */}
+        <div className="sticky top-0 z-20 bg-[#111] border-b border-yellow-500/20 px-6 py-4 flex items-center justify-between rounded-t-2xl">
+
+          <h2 className="text-2xl font-bold text-yellow-400">
+            Lincoln Lubrication Products
+          </h2>
+
+          <button
+            onClick={() => setShowLincolnModal(false)}
+            className="w-10 h-10 rounded-full hover:bg-white/10 text-white text-2xl"
+          >
+            ×
+          </button>
+
+        </div>
+
+        {/* Body */}
+        <div className="p-6 overflow-y-auto max-h-[75vh]">
+
+          {/* Intro */}
+          <div className="mb-8 bg-yellow-500/10 border border-yellow-500/20 rounded-xl p-6">
+
+            <h3 className="text-xl font-bold text-yellow-400 mb-3">
+              Lincoln Automatic Lubrication Systems
+            </h3>
+
+            <p className="text-gray-300 leading-7">
+              Lincoln provides centralized lubrication solutions for heavy
+              industries including steel plants, mining, construction,
+              cement, power generation and manufacturing industries.
+              Explore our pumps, lubrication systems, controllers and
+              accessories below.
+            </p>
+
+          </div>
+
+          {/* Product Cards */}
+
+          <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
+
+            {lincolnProducts.map((product, index) => (
+
+              <div
+                key={index}
+                className="bg-black/40 border border-yellow-500/20 rounded-2xl overflow-hidden hover:border-yellow-400 transition duration-300"
+              >
+
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  className="w-full h-56 object-contain bg-white p-5"
+                />
+
+                <div className="p-5">
+
+                  <h3 className="text-xl font-bold text-yellow-400 mb-3">
+                    {product.name}
+                  </h3>
+
+                  <p className="text-gray-300 text-sm leading-6 mb-5">
+                    {product.description}
+                  </p>
+
+                  <div className="flex gap-3">
+
+                    <a
+                      href={product.file}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="flex-1 bg-white text-black py-2 rounded-lg font-semibold text-center hover:bg-gray-200"
+                    >
+                      Preview
+                    </a>
+
+                    <a
+                      href={product.file}
+                      download
+                      className="flex-1 bg-yellow-500 hover:bg-yellow-600 text-black py-2 rounded-lg font-semibold text-center"
+                    >
+                      Download
+                    </a>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            ))}
+
+          </div>
+
+          {/* Footer */}
+
+          <div className="mt-10 rounded-2xl bg-gradient-to-r from-yellow-500/20 to-transparent border border-yellow-500/20 p-6">
+
+            <h3 className="text-2xl font-bold text-yellow-400 mb-3">
+              Learn More From Lincoln
+            </h3>
+
+            <p className="text-gray-300 mb-6">
+              Explore Lincoln's complete range of centralized lubrication
+              systems, pumps, metering devices, controllers and industrial
+              lubrication accessories.
+            </p>
+
+            <div className="flex flex-wrap gap-4">
+
+              <a
+                href="https://www.skf.com/group/products/lubrication-managemenhttps://www.skf.com/in/products/lubrication-management/lincolnindustrialt"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-yellow-500 hover:bg-yellow-600 text-black px-6 py-3 rounded-xl font-bold"
+              >
+                Visit Official Website →
+              </a>
+
+              <button
+                onClick={() => navigate("/contact")}
+                className="bg-white hover:bg-gray-200 text-black px-6 py-3 rounded-xl font-bold"
+              >
+                Contact Our Experts
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
   </div>
 )}
 </section>
